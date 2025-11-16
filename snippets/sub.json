@@ -1,0 +1,92 @@
+{
+  "Variable Declaration": {
+    "prefix": "var",
+    "body": [
+      "#var ${1:name} = ${2:value}"
+    ],
+    "description": "Create a variable"
+  },
+  "Function Definition": {
+    "prefix": "func",
+    "body": [
+      "#function ${1:name}(${2:params})",
+      "    ${3:// function body}",
+      "    #return ${4:result}",
+      "#end"
+    ],
+    "description": "Create a function"
+  },
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "#if ${1:condition}",
+      "    ${2:// code}",
+      "#end"
+    ],
+    "description": "If statement"
+  },
+  "If-Else Statement": {
+    "prefix": "ifelse",
+    "body": [
+      "#if ${1:condition}",
+      "    ${2:// code}",
+      "#else",
+      "    ${3:// code}",
+      "#end"
+    ],
+    "description": "If-else statement"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "#for ${1:i} in range(${2:10})",
+      "    ${3:// code}",
+      "#end"
+    ],
+    "description": "For loop"
+  },
+  "While Loop": {
+    "prefix": "while",
+    "body": [
+      "#while ${1:condition}",
+      "    ${2:// code}",
+      "#end"
+    ],
+    "description": "While loop"
+  },
+  "UI Window": {
+    "prefix": "ui",
+    "body": [
+      "#ui.window(title=\"${1:My App}\", width=${2:800}, height=${3:600})",
+      "    #ui.button(text=\"${4:Click Me}\", onclick=${5:handler})",
+      "    #ui.label(text=\"${6:Welcome!}\")",
+      "#end"
+    ],
+    "description": "UI window with components"
+  },
+  "Embed Python": {
+    "prefix": "embedpy",
+    "body": [
+      "#embed python",
+      "    ${1:# Python code here}",
+      "#endembed"
+    ],
+    "description": "Embed Python code"
+  },
+  "Embed JavaScript": {
+    "prefix": "embedjs",
+    "body": [
+      "#embed javascript",
+      "    ${1:// JavaScript code here}",
+      "#endembed"
+    ],
+    "description": "Embed JavaScript code"
+  },
+  "Print Statement": {
+    "prefix": "print",
+    "body": [
+      "#print(${1:message})"
+    ],
+    "description": "Print to console"
+  }
+}
