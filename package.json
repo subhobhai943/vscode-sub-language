@@ -1,0 +1,78 @@
+{
+  "name": "sub-language",
+  "displayName": "SUB Language",
+  "description": "Language support for SUB - the world's easiest cross-platform programming language",
+  "version": "1.0.0",
+  "publisher": "SubhadipSarkar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/subhobhai943/vscode-sub-language"
+  },
+  "bugs": {
+    "url": "https://github.com/subhobhai943/sub-lang/issues"
+  },
+  "homepage": "https://github.com/subhobhai943/sub-lang",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "sub",
+    "sublang",
+    "blockchain-syntax",
+    "cross-platform",
+    "compiler"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "sub",
+        "aliases": [
+          "SUB",
+          "sub"
+        ],
+        "extensions": [
+          ".sb"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sub",
+        "scopeName": "source.sub",
+        "path": "./syntaxes/sub.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "sub",
+        "path": "./snippets/sub.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "sub.compile",
+        "title": "SUB: Compile Current File"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^5.0.0",
+    "@vscode/vsce": "^2.22.0"
+  }
+}
